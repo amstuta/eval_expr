@@ -5,10 +5,10 @@
 ## Login   <amstut_a@epitech.net>
 ## 
 ## Started on  Mon Oct 21 09:27:19 2013 amstut_a
-## Last update Wed Oct 23 21:59:00 2013 amstut_a
+## Last update Fri Mar 27 12:48:04 2015 arthur
 ##
 
-CC	= cc
+CC	= gcc
 
 RM	= rm -f
 
@@ -16,14 +16,15 @@ NAME	= eval_expr
 
 SRCS	= main.c\
 	  eval_expr.c\
-	  do_op.c
+	  do_op.c \
+	  lib.c
 
 OBJS	= $(SRCS:.c=.o)
 
 all:	$(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $(NAME) -L ../Piscine-C-lib -lmy
+	$(CC) $(OBJS) -o $(NAME)
 
 clean :	
 	$(RM) $(OBJS)
